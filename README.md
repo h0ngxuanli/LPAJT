@@ -53,9 +53,9 @@ where $\mu_{c}=\frac{1}{n^{c}} \sum_{\mathbf{x}_{j} \in \mathcal{D}_{s}^{c} \cup
 <div align = "justify"> 
 To simplify the optimization, we introduce domain alignment matrices $\mathbf{M_g}$, $\mathbf{M_l}$, $\mathbf{M_p}$ and rewrite the above equations into the following equivalent form:</div>
 
-<div align = 'center'><img src="model/Lg.png", width = 40%, height = 40% ></div>
-<div align = 'center'><img src="model/Ll.png", width = 40%, height = 40% ></div>
-<div align = 'center'><img src="model/Lp.png", width = 40%, height = 40% ></div>
+<div align = 'center'><img src="model/Lg.png", width = 35%, height = 35% ></div>
+<div align = 'center'><img src="model/Ll.png", width = 35%, height = 35% ></div>
+<div align = 'center'><img src="model/Lp.png", width = 35%, height = 35% ></div>
  
  <div align = "justify"> 
 where the total sample matrix $\mathbf{X}= \left[\mathbf{X_s}, \mathbf{X_t}\right] \in \mathbb{R}^{d \times\left(n_s+n_t\right)}$ is defined for convenience, and $\mathbf{x}_i$ and $\mathbf{x}_j$ are the $i$-th and $j$-th columns of $\mathbf{X}$ respectively. $\operatorname{tr}(\cdot)$ is the trace of a matrix. </div>
