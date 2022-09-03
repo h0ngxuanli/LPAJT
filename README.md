@@ -24,7 +24,8 @@ To boost diagnostic performance of models, local hospital expects to extend thei
 
 - ####  Landmark-based Global Alignment
   
-<div align = 'center'><img width="507" alt="global" src="https://user-images.githubusercontent.com/68325219/188080105-f982b35a-2090-4b56-9f6f-612cb2b71d5a.png"></div>
+<div align = 'center'><img src="model/global.png", width = 40%, height = 40% ></div>
+
 <div align = "justify"> 
 where $\mathbf{A}\in \mathbb{R}^{k \times d}$ is the projection matrix to be optimized, $\alpha=\left[ \alpha^{1}; \ldots; \alpha^{c} \right] \in \mathbb{R}^{n_{s}}, \alpha^{c} = \left[\alpha_{1}^{c}  ; \cdots ; \alpha_{n^c_s}^{c} \right] \in \mathbb{R}^{n^c_s}$ and $\alpha_{i}$ denotes the confidence of source sample $\mathbf{x}_{s}^{i}$ selected as the landmark.</div>
 
@@ -36,13 +37,14 @@ target samples $\mathbf{x}_t^i$ and $\mathbf{p}_t^{i(c)}$ denotes the probabilit
 
 
 - ####  Local Alignment via Weighted Semantic Loss
-<div align = 'center'> <img width="397" alt="local" src="https://user-images.githubusercontent.com/68325219/188078468-8aebc8c2-3bb5-440d-b6f9-2bfd8907ee5d.png"> </div>
+
+<div align = 'center'><img src="model/local.png", width = 35%, height = 35% ></div>
 
 <div align = "justify"> 
 where $\mu_s^c$ denotes the $c$-th class center of source domain, i.e., $\mu_s^c=\frac{1}{n_s^c} \sum_{\mathbf{x}_j \in \mathcal{D}_s^c} \mathbf{x}_j$, and $\mathcal{D}_s^c$ is source domain belonging to the $c$-th category. $n_s^c$ is the total number of source domain samples in the specific $c$-th category $\mathcal{D}_s^c$.</div>
 
 - ####  Locality Preserving Loss
-<div align = 'center'>  <img width="343" alt="preserve" src="https://user-images.githubusercontent.com/68325219/188078702-b2e72371-82f0-4bd8-9fb8-a612fe26c479.png"></div>
+<div align = 'center'><img src="model/preserve.png", width = 30%, height = 30% ></div>
 
 <div align = "justify"> 
 where $\mu_{c}=\frac{1}{n^{c}} \sum_{\mathbf{x}_{j} \in \mathcal{D}_{s}^{c} \cup \mathcal{D}_{t}^{c}} \mathbf{x}_{j}$ is the domain-irrelevant class center.</div>
@@ -51,10 +53,9 @@ where $\mu_{c}=\frac{1}{n^{c}} \sum_{\mathbf{x}_{j} \in \mathcal{D}_{s}^{c} \cup
 <div align = "justify"> 
 To simplify the optimization, we introduce domain alignment matrices $\mathbf{M_g}$, $\mathbf{M_l}$, $\mathbf{M_p}$ and rewrite the above equations into the following equivalent form:</div>
 
-<div align = 'center'> <img width="255" alt="Mg" src="https://user-images.githubusercontent.com/68325219/188078741-704ededf-96f7-4ec8-af92-dc83c6e1fd38.png"> </div>
-<div align = 'center'> <img width="445" alt="Ml" src="https://user-images.githubusercontent.com/68325219/188078757-fc0824b4-d8dd-49bb-8a8e-c604777eac3c.png"> </div>
-<div align = 'center'> <img width="413" alt="Mp" src="https://user-images.githubusercontent.com/68325219/188078888-f071e129-7593-4341-8318-ff602b2d2ead.png">
- </div>
+<div align = 'center'><img src="model/Lg.png", width = 40%, height = 40% ></div>
+<div align = 'center'><img src="model/Ll.png", width = 40%, height = 40% ></div>
+<div align = 'center'><img src="model/Lp.png", width = 40%, height = 40% ></div>
  
  <div align = "justify"> 
 where the total sample matrix $\mathbf{X}= \left[\mathbf{X_s}, \mathbf{X_t}\right] \in \mathbb{R}^{d \times\left(n_s+n_t\right)}$ is defined for convenience, and $\mathbf{x}_i$ and $\mathbf{x}_j$ are the $i$-th and $j$-th columns of $\mathbf{X}$ respectively. $\operatorname{tr}(\cdot)$ is the trace of a matrix. </div>
